@@ -158,13 +158,12 @@ export default function Home() {
               </div>
               
               <div className="relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1541199249251-f713e6145474?w=600&h=600&fit=crop" 
-                  alt="우아한 여성이 향수를 뿌리는 모습" 
-                  className="rounded-xl shadow-2xl w-full h-auto"
-                  data-testid="empathy-image"
-                />
-                <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-xl"></div>
+                <div className="h-96 bg-gradient-to-br from-primary/20 via-secondary/10 to-accent/20 rounded-xl flex items-center justify-center">
+                  <div className="text-center text-muted-foreground">
+                    <i className="fas fa-sparkles text-6xl mb-4 text-secondary"></i>
+                    <p className="text-lg font-serif">향기의 아름다움</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
