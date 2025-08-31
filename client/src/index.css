@@ -5,37 +5,37 @@
 
 :root {
   --background: hsl(350, 30%, 96%);
-  --foreground: hsl(340, 20%, 15%);
+  --foreground: hsl(340, 30%, 8%);
   --card: hsl(350, 15%, 92%);
-  --card-foreground: hsl(340, 20%, 15%);
+  --card-foreground: hsl(340, 30%, 8%);
   --popover: hsl(350, 15%, 92%);
-  --popover-foreground: hsl(340, 20%, 15%);
-  --primary: hsl(330, 70%, 60%);
-  --primary-foreground: hsl(350, 30%, 96%);
-  --secondary: hsl(320, 80%, 65%);
-  --secondary-foreground: hsl(350, 30%, 96%);
+  --popover-foreground: hsl(340, 30%, 8%);
+  --primary: hsl(330, 80%, 50%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(320, 90%, 55%);
+  --secondary-foreground: hsl(0, 0%, 100%);
   --muted: hsl(350, 10%, 85%);
-  --muted-foreground: hsl(340, 15%, 50%);
-  --accent: hsl(45, 90%, 70%);
-  --accent-foreground: hsl(340, 20%, 15%);
-  --destructive: hsl(0, 70%, 65%);
-  --destructive-foreground: hsl(350, 30%, 96%);
+  --muted-foreground: hsl(340, 25%, 35%);
+  --accent: hsl(45, 95%, 60%);
+  --accent-foreground: hsl(340, 30%, 8%);
+  --destructive: hsl(0, 80%, 55%);
+  --destructive-foreground: hsl(0, 0%, 100%);
   --border: hsl(350, 15%, 80%);
   --input: hsl(350, 15%, 88%);
-  --ring: hsl(330, 70%, 60%);
-  --chart-1: hsl(330, 70%, 60%);
-  --chart-2: hsl(320, 80%, 65%);
-  --chart-3: hsl(45, 90%, 70%);
+  --ring: hsl(330, 80%, 50%);
+  --chart-1: hsl(330, 80%, 50%);
+  --chart-2: hsl(320, 90%, 55%);
+  --chart-3: hsl(45, 95%, 60%);
   --chart-4: hsl(147, 78%, 50%);
   --chart-5: hsl(341, 75%, 60%);
   --sidebar: hsl(350, 15%, 92%);
-  --sidebar-foreground: hsl(340, 20%, 15%);
-  --sidebar-primary: hsl(330, 70%, 60%);
-  --sidebar-primary-foreground: hsl(350, 30%, 96%);
+  --sidebar-foreground: hsl(340, 30%, 8%);
+  --sidebar-primary: hsl(330, 80%, 50%);
+  --sidebar-primary-foreground: hsl(0, 0%, 100%);
   --sidebar-accent: hsl(350, 15%, 80%);
-  --sidebar-accent-foreground: hsl(320, 80%, 65%);
+  --sidebar-accent-foreground: hsl(320, 90%, 55%);
   --sidebar-border: hsl(350, 15%, 80%);
-  --sidebar-ring: hsl(330, 70%, 60%);
+  --sidebar-ring: hsl(330, 80%, 50%);
   --font-sans: 'Inter', sans-serif;
   --font-serif: 'Playfair Display', serif;
   --font-mono: 'Fira Code', monospace;
@@ -84,9 +84,9 @@
 
 @layer utilities {
   .hero-bg {
-    background: radial-gradient(circle at 20% 80%, hsl(330, 50%, 85%) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, hsl(320, 60%, 88%) 0%, transparent 50%),
-                linear-gradient(135deg, hsl(350, 30%, 96%) 0%, hsl(340, 25%, 92%) 100%);
+    background: radial-gradient(circle at 20% 80%, hsl(330, 40%, 88%) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, hsl(320, 50%, 90%) 0%, transparent 50%),
+                linear-gradient(135deg, hsl(350, 20%, 98%) 0%, hsl(340, 15%, 94%) 100%);
   }
 
   .glass-card {
@@ -153,5 +153,26 @@
 
   .animate-float {
     animation: float 6s ease-in-out infinite;
+  }
+
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .text-shadow-strong {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.6);
+  }
+
+  .hero-text {
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(0, 0, 0, 0.7);
+    font-weight: 800;
+  }
+
+  .text-contrast {
+    background: linear-gradient(135deg, hsl(340, 80%, 25%), hsl(320, 70%, 35%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
   }
 }

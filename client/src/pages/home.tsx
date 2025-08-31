@@ -102,20 +102,20 @@ export default function Home() {
         
         <div className="container mx-auto px-4 py-16 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 leading-tight" data-testid="hero-title">
-              <span className="shimmer-text">나만의 시그니처</span><br/>
-              <span className="text-secondary">향기를 찾아서</span>
+            <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 leading-tight hero-text" data-testid="hero-title">
+              <span className="text-contrast">나만의 시그니처</span><br/>
+              <span className="text-secondary font-black">향기를 찾아서</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 font-light" data-testid="hero-subtitle">
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8 font-medium text-shadow" data-testid="hero-subtitle">
               기억 속 그 순간을 되살리는 특별한 향기<br/>
               우디 & 플로럴의 완벽한 조화
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12" data-testid="hero-pricing">
-              <span className="text-3xl md:text-4xl font-bold text-accent">67% 할인</span>
-              <span className="text-lg text-muted-foreground line-through">₩198,000</span>
-              <span className="text-2xl md:text-3xl font-bold text-secondary">₩65,000</span>
+              <span className="text-3xl md:text-4xl font-black text-accent text-shadow-strong">67% 할인</span>
+              <span className="text-lg text-muted-foreground line-through font-semibold">₩198,000</span>
+              <span className="text-2xl md:text-3xl font-black text-secondary text-shadow-strong">₩65,000</span>
             </div>
             
             <GlowButton href="/order" className="mb-8" data-testid="hero-cta-button">
@@ -136,7 +136,7 @@ export default function Home() {
       <section className="py-20 bg-card" data-testid="empathy-section">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8 text-secondary" data-testid="empathy-title">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8 text-contrast text-shadow" data-testid="empathy-title">
               향기는 기억을 부른다
             </h2>
             
@@ -175,8 +175,8 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-foreground" data-testid="product-title">
-                Premium <span className="shimmer-text">Signature</span> Collection
+              <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-contrast text-shadow" data-testid="product-title">
+                Premium <span className="text-secondary font-black">Signature</span> Collection
               </h2>
               <p className="text-xl text-muted-foreground">우디 & 플로럴의 완벽한 조화</p>
             </div>
@@ -245,7 +245,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-secondary" data-testid="fragrance-story-title">
+              <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-contrast text-shadow" data-testid="fragrance-story-title">
                 향기의 여정
               </h2>
               <p className="text-xl text-muted-foreground">세 개의 노트가 만들어내는 완벽한 하모니</p>
@@ -265,8 +265,8 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-foreground" data-testid="reviews-title">
-                <span className="shimmer-text">실제 후기</span>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-contrast text-shadow" data-testid="reviews-title">
+                <span className="text-secondary font-black">실제 후기</span>
               </h2>
               <p className="text-xl text-muted-foreground">이미 경험한 고객들의 솔직한 이야기</p>
               
@@ -364,9 +364,9 @@ export default function Home() {
       <section className="py-20 bg-card" data-testid="final-cta-section">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-secondary" data-testid="final-cta-title">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-contrast text-shadow" data-testid="final-cta-title">
               특별한 순간을 위한<br/>
-              <span className="shimmer-text">나만의 향기</span>
+              <span className="text-secondary font-black">나만의 향기</span>
             </h2>
             
             <p className="text-xl text-muted-foreground mb-8" data-testid="final-cta-description">
