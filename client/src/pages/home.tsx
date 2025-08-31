@@ -7,6 +7,7 @@ import ReviewCard from "@/components/review-card";
 import FragranceNoteCard from "@/components/fragrance-note-card";
 import FAQItem from "@/components/faq-item";
 import SparkleOverlay from "@/components/sparkle-overlay";
+import firstImpressionImage from "@assets/generated_images/first_impression_romance_image_7e799164.png";
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
@@ -46,7 +47,7 @@ export default function Home() {
       title: "Top Notes",
       subtitle: "첫 인상의 설렘",
       description: "베르가못, 핑크 페퍼, 레몬의\n상큼하고 활기찬 시작",
-      image: "https://images.unsplash.com/photo-1515690043123-146e83e2de41?w=400&h=300&fit=crop",
+      image: firstImpressionImage,
       duration: "0-15분",
       noteType: "top" as const
     },
