@@ -118,7 +118,7 @@ export default function Home() {
               <span className="text-2xl md:text-3xl font-bold text-secondary">₩65,000</span>
             </div>
             
-            <GlowButton className="mb-8" data-testid="hero-cta-button">
+            <GlowButton href="/order" className="mb-8" data-testid="hero-cta-button">
               <i className="fas fa-sparkles mr-2"></i>
               지금 특가로 만나기
             </GlowButton>
@@ -221,7 +221,7 @@ export default function Home() {
                     </div>
                   </div>
                   
-                  <GlowButton className="w-full" data-testid="product-cta-button">
+                  <GlowButton href="/order" className="w-full" data-testid="product-cta-button">
                     <i className="fas fa-shopping-cart mr-2"></i>
                     지금 특가로 주문하기
                   </GlowButton>
@@ -391,7 +391,7 @@ export default function Home() {
             </GlassCard>
             
             <div className="space-y-4">
-              <GlowButton size="lg" className="block mx-auto" data-testid="final-cta-button">
+              <GlowButton href="/order" size="lg" className="block mx-auto" data-testid="final-cta-button">
                 <i className="fas fa-sparkles mr-3"></i>
                 특가로 향기 입기
               </GlowButton>

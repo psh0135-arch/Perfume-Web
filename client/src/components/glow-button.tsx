@@ -1,9 +1,11 @@
 import { cn } from "@/lib/utils";
+import { Link } from "wouter";
 
 interface GlowButtonProps {
   children: React.ReactNode;
   className?: string;
   onClick?: () => void;
+  href?: string;
   size?: "sm" | "md" | "lg";
   [key: string]: any;
 }
@@ -12,6 +14,7 @@ export default function GlowButton({
   children, 
   className = "", 
   onClick, 
+  href,
   size = "md",
   ...props 
 }: GlowButtonProps) {
@@ -21,13 +24,29 @@ export default function GlowButton({
     lg: "px-12 py-5 text-xl"
   };
 
+  const buttonClasses = cn(
+    "glow-button rounded-full font-semibold text-primary-foreground transition-all duration-300 hover:scale-105 inline-block text-center",
+    sizeClasses[size],
+    className
+  );
+
+  if (href) {
+    return (
+      <Link href={href}>
+        <span
+          className={buttonClasses}
+          data-testid="glow-button"
+          {...props}
+        >
+          {children}
+        </span>
+      </Link>
+    );
+  }
+
   return (
     <button
-      className={cn(
-        "glow-button rounded-full font-semibold text-primary-foreground transition-all duration-300 hover:scale-105",
-        sizeClasses[size],
-        className
-      )}
+      className={buttonClasses}
       onClick={onClick}
       data-testid="glow-button"
       {...props}
