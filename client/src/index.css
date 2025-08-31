@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(250, 15%, 6%);
+  --foreground: hsl(300, 15%, 95%);
+  --card: hsl(270, 20%, 10%);
+  --card-foreground: hsl(300, 15%, 95%);
+  --popover: hsl(270, 20%, 10%);
+  --popover-foreground: hsl(300, 15%, 95%);
+  --primary: hsl(270, 60%, 50%);
+  --primary-foreground: hsl(300, 15%, 95%);
+  --secondary: hsl(320, 60%, 70%);
+  --secondary-foreground: hsl(270, 30%, 15%);
+  --muted: hsl(270, 20%, 20%);
+  --muted-foreground: hsl(300, 10%, 70%);
+  --accent: hsl(45, 95%, 65%);
+  --accent-foreground: hsl(270, 30%, 15%);
+  --destructive: hsl(0, 60%, 50%);
+  --destructive-foreground: hsl(300, 15%, 95%);
+  --border: hsl(270, 30%, 25%);
+  --input: hsl(270, 30%, 25%);
+  --ring: hsl(270, 60%, 50%);
+  --chart-1: hsl(270, 60%, 50%);
+  --chart-2: hsl(320, 60%, 70%);
+  --chart-3: hsl(45, 95%, 65%);
+  --chart-4: hsl(147, 78%, 42%);
+  --chart-5: hsl(341, 75%, 51%);
+  --sidebar: hsl(270, 20%, 10%);
+  --sidebar-foreground: hsl(300, 15%, 95%);
+  --sidebar-primary: hsl(270, 60%, 50%);
+  --sidebar-primary-foreground: hsl(300, 15%, 95%);
+  --sidebar-accent: hsl(270, 30%, 25%);
+  --sidebar-accent-foreground: hsl(320, 60%, 70%);
+  --sidebar-border: hsl(270, 30%, 25%);
+  --sidebar-ring: hsl(270, 60%, 50%);
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-mono: 'Fira Code', monospace;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: hsl(250, 15%, 6%);
+  --foreground: hsl(300, 15%, 95%);
+  --card: hsl(270, 20%, 10%);
+  --card-foreground: hsl(300, 15%, 95%);
+  --popover: hsl(270, 20%, 10%);
+  --popover-foreground: hsl(300, 15%, 95%);
+  --primary: hsl(270, 60%, 50%);
+  --primary-foreground: hsl(300, 15%, 95%);
+  --secondary: hsl(320, 60%, 70%);
+  --secondary-foreground: hsl(270, 30%, 15%);
+  --muted: hsl(270, 20%, 20%);
+  --muted-foreground: hsl(300, 10%, 70%);
+  --accent: hsl(45, 95%, 65%);
+  --accent-foreground: hsl(270, 30%, 15%);
+  --destructive: hsl(0, 60%, 50%);
+  --destructive-foreground: hsl(300, 15%, 95%);
+  --border: hsl(270, 30%, 25%);
+  --input: hsl(270, 30%, 25%);
+  --ring: hsl(270, 60%, 50%);
+  --sidebar: hsl(270, 20%, 10%);
+  --sidebar-foreground: hsl(300, 15%, 95%);
+  --sidebar-primary: hsl(270, 60%, 50%);
+  --sidebar-primary-foreground: hsl(300, 15%, 95%);
+  --sidebar-accent: hsl(270, 30%, 25%);
+  --sidebar-accent-foreground: hsl(320, 60%, 70%);
+  --sidebar-border: hsl(270, 30%, 25%);
+  --sidebar-ring: hsl(270, 60%, 50%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .hero-bg {
+    background: radial-gradient(circle at 20% 80%, hsl(270, 60%, 15%) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, hsl(320, 60%, 15%) 0%, transparent 50%),
+                linear-gradient(135deg, hsl(250, 15%, 6%) 0%, hsl(270, 20%, 10%) 100%);
+  }
+
+  .glass-card {
+    background: rgba(107, 70, 193, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(232, 121, 249, 0.2);
+  }
+
+  .glow-button {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    box-shadow: 0 0 20px hsl(270, 60%, 50%, 0.5), 0 0 30px hsl(320, 60%, 70%, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .glow-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 40px hsl(270, 60%, 50%, 0.8), 0 0 60px hsl(320, 60%, 70%, 0.6);
+  }
+
+  .shimmer-text {
+    background: linear-gradient(90deg, var(--secondary), var(--accent), var(--secondary));
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  .floating-particle {
+    width: 4px;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes glow {
+    from { 
+      box-shadow: 0 0 20px hsl(270, 60%, 50%, 0.5), 0 0 30px hsl(320, 60%, 70%, 0.3);
+    }
+    to { 
+      box-shadow: 0 0 30px hsl(270, 60%, 50%, 0.8), 0 0 40px hsl(320, 60%, 70%, 0.5);
+    }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+}
