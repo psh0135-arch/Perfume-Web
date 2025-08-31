@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import GlowButton from "@/components/glow-button";
 import GlassCard from "@/components/glass-card";
 import CountdownTimer from "@/components/countdown-timer";
+import SparkleOverlay from "@/components/sparkle-overlay";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -43,7 +44,11 @@ export default function Order() {
   const selectedProduct = productOptions.find(option => option.id === selectedOption);
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground relative" style={{ 
+      background: 'linear-gradient(135deg, hsl(350, 30%, 96%) 0%, hsl(340, 25%, 97%) 50%, hsl(330, 20%, 98%) 100%)',
+      boxShadow: 'inset 0 0 100px rgba(255, 215, 0, 0.1), inset 0 0 60px rgba(255, 105, 180, 0.08)'
+    }}>
+      <SparkleOverlay />
       {/* Header with back button */}
       <header className="bg-card/50 backdrop-blur-sm border-b border-border py-4" data-testid="order-header">
         <div className="container mx-auto px-4">

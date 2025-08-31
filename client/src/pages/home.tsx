@@ -6,6 +6,7 @@ import FloatingParticles from "@/components/floating-particles";
 import ReviewCard from "@/components/review-card";
 import FragranceNoteCard from "@/components/fragrance-note-card";
 import FAQItem from "@/components/faq-item";
+import SparkleOverlay from "@/components/sparkle-overlay";
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
@@ -91,7 +92,8 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground font-sans">
+    <div className="min-h-screen bg-background text-foreground font-sans relative">
+      <SparkleOverlay />
       {/* Hero Section */}
       <section 
         className="relative min-h-screen hero-bg flex items-center justify-center overflow-hidden"
@@ -133,7 +135,10 @@ export default function Home() {
       </section>
 
       {/* 공감 텍스트 섹션 */}
-      <section className="py-20 bg-card" data-testid="empathy-section">
+      <section className="py-20 bg-card relative overflow-hidden" data-testid="empathy-section" style={{ 
+        background: 'linear-gradient(135deg, hsl(350, 15%, 92%) 0%, hsl(340, 20%, 94%) 50%, hsl(330, 25%, 96%) 100%)',
+        boxShadow: 'inset 0 0 60px rgba(255, 215, 0, 0.1), inset 0 0 40px rgba(255, 105, 180, 0.05)'
+      }}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8 text-contrast text-shadow" data-testid="empathy-title">
@@ -171,7 +176,10 @@ export default function Home() {
       </section>
 
       {/* 상품 소개 섹션 */}
-      <section className="py-20 bg-background" data-testid="product-section">
+      <section className="py-20 bg-background relative overflow-hidden" data-testid="product-section" style={{ 
+        background: 'linear-gradient(135deg, hsl(350, 30%, 96%) 0%, hsl(340, 25%, 97%) 50%, hsl(330, 20%, 98%) 100%)',
+        boxShadow: 'inset 0 0 80px rgba(255, 192, 203, 0.15), inset 0 0 40px rgba(255, 215, 0, 0.08)'
+      }}>
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -261,7 +269,10 @@ export default function Home() {
       </section>
 
       {/* 후기 섹션 */}
-      <section className="py-20 bg-background" data-testid="reviews-section">
+      <section className="py-20 bg-background relative overflow-hidden" data-testid="reviews-section" style={{ 
+        background: 'linear-gradient(135deg, hsl(350, 30%, 96%) 0%, hsl(340, 25%, 97%) 50%, hsl(330, 20%, 98%) 100%)',
+        boxShadow: 'inset 0 0 100px rgba(255, 105, 180, 0.12), inset 0 0 50px rgba(255, 215, 0, 0.06)'
+      }}>
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -361,7 +372,10 @@ export default function Home() {
       </section>
 
       {/* 마지막 CTA */}
-      <section className="py-20 bg-card" data-testid="final-cta-section">
+      <section className="py-20 bg-card relative overflow-hidden" data-testid="final-cta-section" style={{ 
+        background: 'linear-gradient(135deg, hsl(350, 15%, 92%) 0%, hsl(340, 20%, 94%) 50%, hsl(330, 25%, 96%) 100%)',
+        boxShadow: 'inset 0 0 120px rgba(255, 215, 0, 0.2), inset 0 0 60px rgba(255, 105, 180, 0.15)'
+      }}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-contrast text-shadow" data-testid="final-cta-title">
