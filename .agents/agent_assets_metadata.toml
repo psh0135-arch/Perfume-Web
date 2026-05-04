@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "V4ZPYIX2_6pROstQ215rh"
+uri = "file://README.md"
+type = "text"
+title = "README.md — Signature Scent 프로젝트"
