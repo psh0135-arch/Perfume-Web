@@ -1,4 +1,4 @@
-import { Switch, Route } from "wouter";
+import { Router, Switch, Route } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -8,14 +8,16 @@ import Home from "@/pages/home";
 import Order from "@/pages/order";
 import Reviews from "@/pages/reviews";
 
-function Router() {
+function AppRouter() {
   return (
-    <Switch>
-      <Route path="/" component={Home} />
-      <Route path="/order" component={Order} />
-      <Route path="/reviews" component={Reviews} />
-      <Route component={NotFound} />
-    </Switch>
+    <Router base="/Perfume-Web">
+      <Switch>
+        <Route path="/" component={Home} />
+        <Route path="/order" component={Order} />
+        <Route path="/reviews" component={Reviews} />
+        <Route component={NotFound} />
+      </Switch>
+    </Router>
   );
 }
 
@@ -24,7 +26,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
-        <Router />
+        <AppRouter />
       </TooltipProvider>
     </QueryClientProvider>
   );
